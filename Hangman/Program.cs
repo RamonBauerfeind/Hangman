@@ -78,7 +78,6 @@ namespace Hangman
         {
             int lives = 10;
             string hiddenWord = "";
-            bool foundCharacterInWord = false;
             string tempHiddenWord;
 
             for(int i = 0; i < word.Length; i++)
@@ -89,6 +88,7 @@ namespace Hangman
             while(true)
             {
                 char character;
+                bool foundCharacterInWord = false;
 
                 Console.Clear();
                 Console.WriteLine("Gesuchtes Wort : " + hiddenWord);
@@ -150,7 +150,7 @@ namespace Hangman
                 {
                     hiddenWord = tempHiddenWord;
 
-                    if(lives > 0)
+                    if(lives > 1)
                     {
                         lives -= 1;
                     }
